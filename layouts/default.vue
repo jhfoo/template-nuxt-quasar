@@ -30,11 +30,6 @@
           Essential Links
         </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
       </q-list>
     </q-drawer>
 
@@ -43,3 +38,10 @@
     </q-page-container>
   </q-layout>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const leftDrawerOpen = ref(false)
+const toggleLeftDrawer = ref (false)
+</script>
